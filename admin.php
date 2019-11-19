@@ -1,4 +1,4 @@
-<?php /* HOLA */
+<?php //quesito
 session_start();
 include("header.php");
 ?>

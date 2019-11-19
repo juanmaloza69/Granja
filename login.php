@@ -31,7 +31,7 @@
             }
             else{
                 require_once("conexion.php");
-                $consulta = "SELECT * FROM granjero where nombre='" . $_POST['usuario'] . "' and contraseña = '". $_POST['contraseña'] ."';";
+                $consulta = "SELECT * FROM usuarios where nombre='" . $_POST['usuario'] . "' and contraseña = '". $_POST['contraseña'] ."';";
                 $sentencia = $conexion->prepare($consulta);
                 $sentencia->execute();
                 $resultados = $sentencia->fetchAll();

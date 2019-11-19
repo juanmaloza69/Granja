@@ -23,7 +23,7 @@
             </form>
 
 <?php
-
+    
     
         if(isset($_POST["envio"])){
             if(empty($_POST["usuario"]) || empty($_POST["contraseña"])){

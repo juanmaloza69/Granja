@@ -19,7 +19,7 @@ if(!isset($_SESSION['usuario'])){
 
 <?php
     require_once("conexion.php");
-    $consulta = "SELECT * FROM animale where id_trabajador = (select id from trabajadores where nombre='".$_SESSION['usuario']."');";
+    $consulta = "SELECT * FROM animal where id_trabajador = (select id from trabajadores where nombre='".$_SESSION['usuario']."');";
     $sentencia = $conexion->prepare($consulta);
     $sentencia->execute();
     $resultados = $sentencia->fetchAll();

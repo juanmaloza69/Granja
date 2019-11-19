@@ -9,6 +9,22 @@ class Granja {
 
     public function __construct($nombre) {
         $this->_nombre = $nombre;
+
+        require("conexion.php");
+        if(!isset($_SESSION['usuario'])){
+            header("location: login.php");
+        }
+        
+        $consulta = "SELECT * FROM trabajadores where nombre_granja='" . $nombre . "';";
+        $sentencia = $conexion->prepare($consulta);
+        $sentencia->execute();
+        $trabajadores = $sentencia->fetchAll();
+
+        foreach ($trabajadores as $fila) {
+            $granjero = new Granjero($fila['nombre'],$fila['fecha_ingreso']);
+            $this->granjeros[] = $granjero;
+        }
+        
     }
 
     public function __toString() {
@@ -53,7 +69,7 @@ class Granja {
         return $this->animales;
     }
 
-    public function getAnimales(){
+    public function getCultivos(){
         return $this->cultivos;
     }
 

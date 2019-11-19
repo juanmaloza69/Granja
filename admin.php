@@ -1,8 +1,8 @@
-<?php /* Hola */
+<?php /*  */
 session_start();
 include("header.php");
 ?>
-<title>Granja Gustavo</title>
+
 <div class="mt-2 mb-2 center-block">
 <a href="login.php" class="btn btn-warning btn-block">
     <i class="fa fa-close"></i> Cerrar Sesión
@@ -25,11 +25,11 @@ if(!isset($_SESSION['usuario'])){
     $resultados = $sentencia->fetchAll();
     
 
-  $consulta1 = "SELECT * FROM cultivos where id_trabajador = (select id from cultivos where nombre='".$_SESSION['usuario']."');";
+	$consulta1 = "SELECT * FROM cultivos where id_trabajador = (select id from cultivos where nombre='".$_SESSION['usuario']."');";
 
-  $sentencia1 = $conexion->prepare($consulta1);
-  $sentencia1->execute();
-  $resultadoscultivos = $sentencia1->fetchAll();
+	$sentencia1 = $conexion->prepare($consulta1);
+	$sentencia1->execute();
+	$resultadoscultivos = $sentencia1->fetchAll();
 
 
                     
@@ -45,11 +45,11 @@ foreach ($resultados as $fila) {
 
       <div class="col-lg-3 col-md-3 mb-4">
         <div class="card h-100">
-          <div class="h-70">
+        	<div class="h-70">
           <?php
           echo "<img style='height: 350px; width:200px;' class='card-img-top m-auto d-block' src='./img/". $fila["tipo"] . $fila["estado"] . ".png' alt=''>";
           ?> 
-            </div >
+          	</div >
           <div class="card-body">
             <h4 class="card-title"><?php echo $fila["tipo"] . " " . $fila["id"];?></h4>
             <p class="card-text">Estado: <?php echo $fila["estado"];?></p>

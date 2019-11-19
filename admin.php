@@ -1,4 +1,4 @@
-<?php /*  holahola*/
+<?php /*  */
 session_start();
 include("header.php");
 ?>
@@ -19,13 +19,13 @@ if(!isset($_SESSION['usuario'])){
 
 <?php
     require_once("conexion.php");
-    $consulta = "SELECT * FROM animal where id_trabajador = (select id from trabajadores where nombre='".$_SESSION['usuario']."');";
+    $consulta = "SELECT * FROM animales where id_trabajador = (select id from trabajadores where nombre='".$_SESSION['usuario']."');";
     $sentencia = $conexion->prepare($consulta);
     $sentencia->execute();
     $resultados = $sentencia->fetchAll();
     
 
-  $consulta1 = "SELECT * FROM cultivo where id_trabajador = (select id from cultivos where nombre='".$_SESSION['usuario']."');";
+  $consulta1 = "SELECT * FROM cultivos where id_trabajador = (select id from cultivos where nombre='".$_SESSION['usuario']."');";
 
   $sentencia1 = $conexion->prepare($consulta1);
   $sentencia1->execute();

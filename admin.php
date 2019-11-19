@@ -1,4 +1,4 @@
-<?php /*  */
+<?php /* Hola */
 session_start();
 include("header.php");
 ?>

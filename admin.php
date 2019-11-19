@@ -2,7 +2,7 @@
 session_start();
 include("header.php");
 ?>
-
+<title>Granja Gustavo</title>
 <div class="mt-2 mb-2 center-block">
 <a href="login.php" class="btn btn-warning btn-block">
     <i class="fa fa-close"></i> Cerrar Sesión

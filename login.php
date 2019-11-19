@@ -1,7 +1,7 @@
 <?php include("header.php")?>
 
 
-
+<title>Registro de granjero</title>
 <div class="container my-5 col-10 bg-light border border-dark rounded py-1 pt-0">
     <div class="row my-2 ">
         <div class="col-5 ">
@@ -31,7 +31,7 @@
             }
             else{
                 require_once("conexion.php");
-                $consulta = "SELECT * FROM usuarios where nombre='" . $_POST['usuario'] . "' and contraseña = '". $_POST['contraseña'] ."';";
+                $consulta = "SELECT * FROM granjero where nombre='" . $_POST['usuario'] . "' and contraseña = '". $_POST['contraseña'] ."';";
                 $sentencia = $conexion->prepare($consulta);
                 $sentencia->execute();
                 $resultados = $sentencia->fetchAll();

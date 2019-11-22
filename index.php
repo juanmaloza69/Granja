@@ -133,5 +133,3 @@ $index = new Index();
 $index->ejecutar();
 
 ?>
-
-<?php include("footer.php"); ?>

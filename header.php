@@ -18,7 +18,7 @@
 
 </head>
 
-<body  style="background-image: url('3.jpg'); background-repeat: repeat; background-size: 300px;">
+<body  style="background-image: url('img/3.jpg'); background-repeat: repeat; background-size: 300px;">
  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container" >
       <a class="navbar-brand" href="#">La granja GUSTAVO</a>
@@ -32,14 +32,6 @@
               <span class="sr-only">(current)</span>
             </a>
           </li>
-          <!--
-          <li class="nav-item">
-            <a class="nav-link" href="#">Cultivos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Animales</a>
-          </li>
-        -->
         </ul>
       </div>
     </div>

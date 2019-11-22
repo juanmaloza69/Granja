@@ -15,13 +15,13 @@ class Animal
     {
         switch($tipo) {
             case 'gallina':
-                return new Gallina($id,$estado, $fecha_comida, $fecha_nacimiento);
+            return new Gallina($id,$estado, $fecha_comida, $fecha_nacimiento);
             case 'cerdo':
-                return new Cerdo($id,$estado, $fecha_comida, $fecha_nacimiento);
+            return new Cerdo($id,$estado, $fecha_comida, $fecha_nacimiento);
             case 'vaca':
-                return new Vaca($id,$estado, $fecha_comida, $fecha_nacimiento);
+            return new Vaca($id,$estado, $fecha_comida, $fecha_nacimiento);
             default:
-                return new Exception("Clase de animal no válido");
+            return new Exception("Clase de animal no válido");
         }
     }
 
@@ -53,17 +53,17 @@ class Animal
             //calculamos la diferencia en minutos
             $diferencia=$now->diff($fecha);
 
-                $days = $diferencia->format('%a');
-                $minutes = 0;
-                if($days){
-                    $minutes += 24 * 60 * $days;
-                }
-                $hours = $diferencia->format('%H');
-                if($hours){
-                    $minutes += 60 * $hours;
-                }
-                $minutes += $diferencia->format('%i');
-                
+            $days = $diferencia->format('%a');
+            $minutes = 0;
+            if($days){
+                $minutes += 24 * 60 * $days;
+            }
+            $hours = $diferencia->format('%H');
+            if($hours){
+                $minutes += 60 * $hours;
+            }
+            $minutes += $diferencia->format('%i');
+            
             //si hace más de 5 minutos que no le damos de comer, solo habrá que darle una vez (para facilitar el juego)
             if( $minutes > 5){
                 $fecha = new DateTime(date('Y-m-d H:i:s'));
@@ -110,25 +110,25 @@ class Animal
             //calculamos la diferencia en minutos
             $diferencia=$actual->diff($fecha);
 
-                $days = $diferencia->format('%a');
-                $minutes = 0;
-                if($days){
-                    $minutes += 24 * 60 * $days;
-                }
-                $hours = $diferencia->format('%H');
-                if($hours){
-                    $minutes += 60 * $hours;
-                }
-                $minutes += $diferencia->format('%i');
+            $days = $diferencia->format('%a');
+            $minutes = 0;
+            if($days){
+                $minutes += 24 * 60 * $days;
+            }
+            $hours = $diferencia->format('%H');
+            if($hours){
+                $minutes += 60 * $hours;
+            }
+            $minutes += $diferencia->format('%i');
 
             if($minutes > $this->tiempocrecimiento){
                 $this->edad = 'adulto';
             }
             else{
-                 $this->edad = 'joven';
-            }
-        }
-    }
+               $this->edad = 'joven';
+           }
+       }
+   }
 }
 
 class Gallina extends Animal 

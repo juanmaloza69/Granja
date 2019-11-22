@@ -1,7 +1,7 @@
 <?php include("header.php")?>
 
 
-<title>Registro de granjero</title>
+
 <div class="container my-5 col-10 bg-light border border-dark rounded py-1 pt-0">
     <div class="row my-2 ">
         <div class="col-5 ">
@@ -23,7 +23,7 @@
             </form>
 
 <?php
-    
+
     
         if(isset($_POST["envio"])){
             if(empty($_POST["usuario"]) || empty($_POST["contraseña"])){
@@ -43,7 +43,7 @@
                     session_start();
                     $_SESSION["usuario"] = $_POST["usuario"];
                     echo "<p>Inicio de sesión correcto.</p>";
-                    header("location:admin.php");
+                    header("location:Index.php");
                 }
             }
         }

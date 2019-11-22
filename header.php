@@ -8,6 +8,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
+  <title>LA GRANJA</title>
+
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -26,16 +28,18 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="admin.php">Inicio
+            <a class="nav-link" href="Index.php">Inicio
               <span class="sr-only">(current)</span>
             </a>
           </li>
+          <!--
           <li class="nav-item">
             <a class="nav-link" href="#">Cultivos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Animales</a>
           </li>
+        -->
         </ul>
       </div>
     </div>
